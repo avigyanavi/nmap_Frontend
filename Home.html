@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Nmap</title>
+  <meta name="description" content="A simple Nmap Frontend Project">
+  <meta name="avi" content="SitePoint">
+
+  <meta property="og:title" content="Interactive Nmap">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.napp.com/Home">
+  <meta property="og:description" content="A simple frontend webapp for nmap tool">
+  <meta property="og:image" content="image100.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+
+<body>
+  <h1>
+    Nmap
+  </h1>
+  <ul id="NavBar">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Scans.html">Previous Scan Reports</a></li>
+    <li><a href="Hosts.html">Latest Scan</a></li>
+    <li><a href="Readme.html">Read Me</a></li>
+    <li style="float:right"><a href="Help.html">Help</a></li>
+  </ul>
+  <div class="Nmap_input">
+    <form id="IP">
+      <label for="IPadd">IP address:</label><br>
+      <input type="text" id="IPadd" name="IPadd"><br>
+    </form>
+    <form id="Subnet">  
+      <label for="mask">Mask:</label><br>
+      <input type="text" id="mask" name="mask">
+    </form>
+    <label for="profiles">Choose scan profile:</label>
+    <select name="profiles" id="profiles">
+      <option value="Intense Scan">Intense Scan</option>
+      <option value="Intense Scan UDP">Intense Scan plus UDP</option>
+      <option value="Intense Scan TCP">Intense Scan all TCP Ports</option>
+      <option value="Intense Scan no ping">Intense Scan no ping</option>
+      <option value="Ping Scan">Ping Scan</option>
+      <option value="Quick Scan">Quick Scan</option>
+      <option value="Quick Scan plus">Quick Scan plus</option>
+      <option value="Quick Traceroute">Quick traceroute</option>
+      <option value="Regular Scan">Regular Scan</option>
+      <option value="Slow">Slow, Comprehensive Scan</option>
+    </select>
+    <button id= "ScanB" onclick="newLocation()">Scan
+    </button>
+  </div>
+  <div class="Prev_Scans">
+    <br><br><br>
+  <h2>Previous Scans</h2>
+  <table>
+    <tr>
+      <th>IP Address</th>
+      <th>Date</th>
+      <th>Duration</th>
+    </tr>
+    <tr>
+      <td>192.168.15.0/25</td>
+      <td>08-06-2022</td>
+      <td>120s</td>
+    </tr>
+    <tr>
+      <td>10.13.1.0/16</td>
+      <td>07-06-2022</td>
+      <td>500s</td>
+    </tr>
+    <tr>
+      <td><a href="Scans.html">10.182.17.70/27</a></td>
+      <td>10-08-2022</td>
+      <td>12s</td>
+    </tr>
+  </table>
+</div>
+<br><br><br><br>
+<p style="font-size:15px">Help (Resize toggle at bottom right of video)</p>
+  <div class="resizable"> 
+    <iframe class= "YT" src="https://www.youtube.com/embed/5cNd-o1VX7o?modestbranding=1&start=22">
+    </iframe> 
+  </div>
+</body>
+</html>

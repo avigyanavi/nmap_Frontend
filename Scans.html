@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Nmap</title>
+  <meta name="description" content="Help for nmap Frontend">
+  <meta name="avi" content="SitePoint">
+
+  <meta property="og:title" content="Interactive Nmap">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.napp.com/Help">
+  <meta property="og:description" content="A simple frontend webapp for nmap tool">
+  <meta property="og:image" content="image100.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <h1>
+        Nmap
+    </h1>
+      <ul id="NavBar">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Scans.html">Previous Scan Reports</a></li>
+        <li><a href="Hosts.html">Latest Scan</a></li>
+        <li><a href="Readme.html">Read Me</a></li>
+        <li style="float:right"><a href="Help.html">Help</a></li>
+      </ul>
+<p>Scan report for 10.182.17.70/27:</p>
+<div class="ScansParent">
+    <div class="LeftChild">
+        <div class="Ltab">
+            <button class="tablinks" onclick="openTab(event, 'Hosts')">Hosts</button>
+            <button class="tablinks" onclick="openTab(event, 'Services')">Services</button>
+          </div>
+          
+          <div id="Hosts" class="tabcontent">
+            <h3>Hosts Scanned:</h3>
+            <p>Nmap scan report for 10.182.17.64<br>
+                Nmap scan report for 10.182.17.65<br>
+                Nmap scan report for 10.182.17.66<br>
+                Nmap scan report for 10.182.17.67<br>
+                Nmap scan report for 10.182.17.68<br>
+                Nmap scan report for 10.182.17.69<br>
+                Nmap scan report for 10.182.17.70<br>
+                Nmap scan report for 10.182.17.71<br>
+                Nmap scan report for 10.182.17.72<br>
+                Nmap scan report for 10.182.17.73<br>
+                Nmap scan report for RoughPatch (10.182.17.74)<br>
+                Nmap scan report for 10.182.17.75<br>
+                Nmap scan report for 10.182.17.76<br>
+                Nmap scan report for 10.182.17.77<br>
+                Nmap scan report for 10.182.17.78<br>
+                Nmap scan report for 10.182.17.79<br>
+                Nmap scan report for 10.182.17.80<br>
+                Nmap scan report for 10.182.17.81<br>
+                Nmap scan report for 10.182.17.82<br>
+                Nmap scan report for 10.182.17.83<br>
+                Nmap scan report for 10.182.17.84<br>
+                Nmap scan report for 10.182.17.85<br>
+                Nmap scan report for 10.182.17.86<br>
+                Nmap scan report for 10.182.17.87<br>
+                Nmap scan report for 10.182.17.88<br>
+                Nmap scan report for 10.182.17.89<br>
+                Nmap scan report for 10.182.17.90<br>
+                Nmap scan report for 10.182.17.91<br>
+                Nmap scan report for 10.182.17.92<br>
+                Nmap scan report for 10.182.17.93<br>
+                Nmap scan report for 10.182.17.94<br>
+                Nmap scan report for 10.182.17.95<br>
+                Nmap done: 32 IP addresses (0 hosts up) scanned in 0.04 seconds
+                </p>
+          </div>
+          
+          <div id="Services" class="tabcontent">
+            <h3>Services Scan</h3>
+            <p>Starting Nmap 7.93 ( https://nmap.org ) at 2022-10-09 19:02 EDT<br>
+                Nmap scan report for RoughPatch (10.182.17.74)<br>
+                Host is up (0.0000070s latency).<br>
+                All 1000 scanned ports on RoughPatch (10.182.17.74) are in ignored states.<br>
+                Not shown: 1000 closed tcp ports (reset)<br>
+                <br>
+                Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br>
+                Nmap done: 32 IP addresses (1 host up) scanned in 3.15 seconds<br>
+                </p>
+          </div>
+          
+          <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+    <div class="RightChild">
+        <div class="Rtab">
+            <button class="tablinks" onclick="openTab(event, 'Output')">Nmap Output</button>
+            <button class="tablinks" onclick="openTab(event, 'Port')">Port/Hosts</button>
+            <button class="tablinks" onclick="openTab(event, 'Topology')">Topology</button>
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Output" class="tabcontent">
+            <h3>Nmap scan report for gateway (10.182.16.1)</h3>
+            <p>
+                Host is up (0.0052s latency). <br>
+                Not shown: 991 closed tcp ports (reset) <br>
+                PORT     STATE    SERVICE <br>
+                21/tcp   filtered ftp <br>
+                22/tcp   filtered ssh <br>
+                23/tcp   filtered telnet <br>
+                25/tcp   filtered smtp <br>
+                80/tcp   filtered http <br>
+                135/tcp  filtered msrpc <br>
+                445/tcp  filtered microsoft-ds <br>
+                593/tcp  filtered http-rpc-epmap <br>
+                8291/tcp filtered unknown <br>
+                MAC Address: 74:4D:28:93:3C:21 (Routerboard.com) <br>
+                <br>
+                Nmap scan report for RoughPatch (10.182.17.74)<br>
+                Host is up (0.0000070s latency).<br>
+                All 1000 scanned ports on RoughPatch (10.182.17.74) are in ignored states.<br>
+                Not shown: 1000 closed tcp ports (reset)<br>
+                <br>
+                Nmap done: 1024 IP addresses (2 hosts up) scanned in 7.56 seconds</p>
+          </div>
+          
+          <div id="Port" class="tabcontent">
+            <h3>Ports Scanned: 1000</h3>
+            <p>Open Ports: <br>
+                21<br>22<br>23<br>25<br>80<br>135<br>445<br>593<br>8291<br></p>
+          </div>
+          
+          <div id="Topology" class="tabcontent">
+            <h3>Work in Progress</h3>
+            <p>Work in Progress</p>
+          </div>    
+    </div>
+</div>
+    

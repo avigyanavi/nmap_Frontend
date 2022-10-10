@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Nmap</title>
+  <meta name="description" content="ReadMe for nmap Frontend">
+  <meta name="avi" content="SitePoint">
+
+  <meta property="og:title" content="Interactive Nmap">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.napp.com/Readme">
+  <meta property="og:description" content="A simple frontend webapp for nmap tool">
+  <meta property="og:image" content="image100.png">
+
+  <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+
+  <body>
+    <h1>
+        Nmap
+      </h1>
+      <ul id="NavBar">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Scans.html">Previous Scan Reports</a></li>
+        <li><a href="Hosts.html">Latest Scan</a></li>
+        <li><a href="Readme.html">Read Me</a></li>
+        <li style="float:right"><a href="Help.html">Help</a></li>
+      </ul>
+  
+    <p>This is a front end interface for an already existing localhost webserver to run nmap command with the click of a button for non-technical staff</p> <br>
+    <div class="FlexParent">
+    <div class="ReadMe">
+    <h2>How it works:</h2>
+      <br>
+      <img id = "nmapp" src="nmapp.png" alt="Basic Framework of how Napp may work">
+      <br>
+      <p>
+        The user needs to have Nmap installed, and Apache Webserver running on localhost.<br>
+        The webserver calls the shellscript which executes nmap on the user's host and subnetwork.<br>
+        Nmap will then execute the command provided by the user and return the results (e.g port scans of Host 2 and Host 3)<br>
+      </p>
+    </div>
+      <div class="PUC">
+      <h2>Pre-Usage Configuration on host:</h2>
+      <p>
+      Step 1: <br>
+      Install Apache (If already not installed) <br>
+      sudo apt-get install apache2 <br><br><br>
+      Step 2: <br>
+      Start Apache2<br>
+      Sudo systemctl apache2 start<br><br><br>
+      Step 3: <br>
+      Install Nmap (if not already installed) <br>
+      sudo apt-get install nmap <br><br><br>
+      Step 4: <br>
+      Download given code and place in cd /usr/lib/cgi-bin <br>
+      and run sudo chmod a+x nmapp.sh
+      </p>
+    </div>
+  </div>
+  <div id="Dbutton">
+    <a href="Mimetypes-shell-script-icon.png" download>
+      <img src="Mimetypes-shell-script-icon.png" alt="download_button" width="75" height="75">
+    </a>
+    <p>Download</p>
+  </div>
+  </body>
+</html>
