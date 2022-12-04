@@ -11,7 +11,9 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth import authenticate, login, logout
 from django.template import loader
-
+import re
+import json
+from urllib2 import urlopen
 
 def index(request):
     return render(request, "nhome/index.html")
@@ -23,8 +25,14 @@ def signin(request):
     return render(request, "nhome/signin.html", context)
 
 
+
 def home(request):
     context = {}
+    ip = '10.186.68.122';
+    response = urlopen('http://ipwho.is/'+ip)
+    ipwhois = json.load(response)
+
+    print '{0} {1}'.format(ipwhois['country'],ipwhois['flag']['emoji'])
     return render(request, 'nhome/home.html', context)
 # from django.template import loader
 # from django.http import HttpResponse
@@ -49,3 +57,4 @@ def aboutme(request):
 def hosts(request):
     context = {}
     return render(request, 'nhome/hosts.html', context)
+
