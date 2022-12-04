@@ -43,9 +43,9 @@ def scans(request):
     context = {}
     return render(request, 'nhome/Scans.html', context)
 
-def readme(request):
+def aboutme(request):
     context = {}
-    return render(request, 'nhome/Readme.html', context)
+    return render(request, 'nhome/Aboutme.html', context)
 
 def hosts(request):
     context = {}
