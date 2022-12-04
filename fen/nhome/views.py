@@ -12,7 +12,6 @@ from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth import authenticate, login, logout
 from django.template import loader
 
-# we not longer need the above two imports! (for the index view function)
 
 def index(request):
     return render(request, "nhome/index.html")
@@ -26,7 +25,7 @@ def signin(request):
 
 def home(request):
     context = {}
-    return render(request, 'nhome/Home.html', context)
+    return render(request, 'nhome/home.html', context)
 # from django.template import loader
 # from django.http import HttpResponse
 
@@ -37,16 +36,16 @@ def home(request):
 
 def help(request):
     context = {}
-    return render(request, 'nhome/Help.html', context)
+    return render(request, 'nhome/help.html', context)
 
 def scans(request):
     context = {}
-    return render(request, 'nhome/Scans.html', context)
+    return render(request, 'nhome/scans.html', context)
 
 def aboutme(request):
     context = {}
-    return render(request, 'nhome/Aboutme.html', context)
+    return render(request, 'nhome/aboutme.html', context)
 
 def hosts(request):
     context = {}
-    return render(request, 'nhome/Hosts.html', context)
+    return render(request, 'nhome/hosts.html', context)
