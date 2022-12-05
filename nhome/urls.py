@@ -12,4 +12,5 @@ urlpatterns = [
     path('scans/', views.scans, name='scans'),
     path('hosts/', views.hosts, name='hosts'),
     path('signin/', views.signin, name='signin'),
+    path('visitorlog/', views.visitorlog, name='visitorlog'),
 ]
