@@ -13,4 +13,6 @@ urlpatterns = [
     path('hosts/', views.hosts, name='hosts'),
     path('signin/', views.signin, name='signin'),
     path('visitorlog/', views.visitorlog, name='visitorlog'),
+    path('visitorlog/add/', views.add, name='add'),
+    path('vistorlog/add/addrecord/', views.addrecord, name='addrecord'),
 ]

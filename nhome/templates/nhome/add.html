@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Nmap</title>
+</head>
+<body>
+
+<h1>Add visitor</h1>
+
+<form action="addrecord/" method="post">
+{% csrf_token %}
+Username:<br>
+<input name="username">
+<br><br>
+Password:<br>
+<input name="Pass1">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -57,3 +57,14 @@ def visitorlog(request):
     'mymembers': mymembers,
     }
     return HttpResponse(template.render(context, request))
+
+def add(request):
+  template = loader.get_template('add.html')
+  return HttpResponse(template.render({}, request))
+
+def addrecord(request):
+  x = request.POST['username']
+  y = request.POST['pass1']
+  nhome = nhome(username=x, pass1=y)
+  nhome.save()
+  return HttpResponseRedirect(reverse('visitorlog'))
