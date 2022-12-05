@@ -58,5 +58,5 @@ def users(request):
     users = r.json()
    # print(users)
     
-    return render(request, "nhome/users.html", {'users': users})
+    return render(request, "users.html", {'users': users})
     pass
