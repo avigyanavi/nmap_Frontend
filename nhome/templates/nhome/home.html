@@ -62,6 +62,22 @@
     <button id= "ScanB" onclick="newLocation()">Scan
     </button>
   </div>
+  <div class="api">
+    <strong>Your IP Statistics</strong>
+    <script type="text/javascript">
+      var ip = "";
+      var api_key = "at_qXFI01j1qpzugI8SB9r7kgzwZ8WFJ";
+      $(function () {
+         $.ajax({
+             url: "https://geo.ipify.org/api/v1",
+             data: {apiKey: api_key, ipAddress: ip},
+             success: function(data) {
+                 $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+             }
+         });
+      });
+  </script>
+  </div>
   <div class="Prev_Scans">
     <br><br><br>
   <h2>Previous Scans</h2>

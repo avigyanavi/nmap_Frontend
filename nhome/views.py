@@ -13,6 +13,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.template import loader
 from django.urls import reverse
 from .models import nhome
+import requests
+import json
+
 
 def index(request):
     return render(request, "nhome/index.html")
@@ -70,3 +73,7 @@ def addrecord(request):
     nhome = nhome(username=x, pass1=y)
     nhome.save()
     return HttpResponseRedirect(reverse('home'))
+
+def api(request):
+    response = requests.get('https://geo.ipify.org/api/v2/country?apiKey=at_qXFI01j1qpzugI8SB9r7kgzwZ8WFJ').json()
+    return render(request, 'home.html', {'response':response})
