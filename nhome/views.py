@@ -1,6 +1,6 @@
 # from django.shortcuts import render
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.core.mail import EmailMessage, send_mail
@@ -11,6 +11,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.utils.encoding import force_bytes, force_str
 from django.contrib.auth import authenticate, login, logout
 from django.template import loader
+from django.urls import reverse
 from .models import nhome
 
 def index(request):
@@ -59,12 +60,13 @@ def visitorlog(request):
     return HttpResponse(template.render(context, request))
 
 def add(request):
-  template = loader.get_template('add.html')
+  template = loader.get_template('nhome/add.html')
   return HttpResponse(template.render({}, request))
 
 def addrecord(request):
-  x = request.POST['username']
-  y = request.POST['pass1']
-  nhome = nhome(username=x, pass1=y)
-  nhome.save()
-  return HttpResponseRedirect(reverse('visitorlog'))
+    global nhome
+    x = request.POST['username']
+    y = request.POST['Pass1']
+    nhome = nhome(username=x, pass1=y)
+    nhome.save()
+    return HttpResponseRedirect(reverse('home'))
