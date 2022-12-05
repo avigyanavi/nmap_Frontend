@@ -5,3 +5,8 @@ Pillow==9.0.1
 psycopg2-binary==2.9.5
 Werkzeug==2.2.2
 whitenoise==6.2.0
+requests==2.27.1
+python-whois==0.7.3
+more-itertools==8.12.0
+netaddr==0.8.0
+networkx==2.6.3
