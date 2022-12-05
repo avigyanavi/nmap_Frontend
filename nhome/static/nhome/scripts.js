@@ -40,7 +40,7 @@ function newLocation()
     $(".IP_Holder_Button").click(function(){
        $(".IP_Holder").append("<p>User Interaction Simulation</p>");
     });
-});
+})(jQuery);
 
 
 (function($) {
