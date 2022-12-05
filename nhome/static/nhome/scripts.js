@@ -42,8 +42,7 @@ function newLocation()
     });
 });
 
-$( document ).ready(function() {
-  console.log( "ready!" );
+
 (function($) {
     
   var allPanels = $('.accordion > dd').hide();
@@ -55,7 +54,6 @@ $( document ).ready(function() {
   });
 
 })(jQuery);
-});
 
 function openTab(Levt, LName) {
   // Declare all variables
