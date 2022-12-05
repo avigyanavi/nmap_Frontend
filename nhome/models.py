@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class nhome(models.Model):
+    username = models.CharField(max_length=50)
+    pass1 = models.CharField(max_length=250)

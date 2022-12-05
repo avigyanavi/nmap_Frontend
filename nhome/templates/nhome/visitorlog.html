@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Nmap</title>
+  <meta name="description" content="A simple Nmap Frontend Project">
+  <meta name="avi" content="SitePoint">
+
+  <meta property="og:title" content="Interactive Nmap">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.napp.com/Home">
+  <meta property="og:description" content="A simple frontend webapp for nmap tool">
+  <meta property="og:image" content="image100.png">
+
+  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+
+  <link rel="stylesheet" type="text/css" href="{% static '/nhome/styles.css' %}">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="{% static '/nhome/scripts.js' %}"></script>
+  </head>
+
+<body>
+  <h1>
+    Nmap
+  </h1>
+  <ul id="NavBar">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'scans' %}">Previous Scan Reports</a></li>
+    <li><a href="{% url 'hosts' %}">Latest Scan</a></li>
+    <li><a href="{% url 'aboutme' %}">About Me</a></li>
+    <li><a href="{% url 'visitorlog' %}">Visitor Log</a></li>
+    <li style="float:right"><a href="{% url 'help' %}">Help</a></li>
+  </ul>
+  <h1>Members</h1>
+
+<table>
+{% for x in mymembers %}
+<tr>
+<td>{{ x.id }}</td>
+<td>{{ x.username }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>

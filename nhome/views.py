@@ -49,3 +49,11 @@ def aboutme(request):
 def hosts(request):
     context = {}
     return render(request, 'nhome/hosts.html', context)
+
+def visitorlog(request):
+    mymembers = nhome.objects.all().values()
+    template = loader.get_template('nhome/visitorlog.html')
+    context = {
+    'mymembers': mymembers,
+    }
+    return HttpResponse(template.render(context, request))
